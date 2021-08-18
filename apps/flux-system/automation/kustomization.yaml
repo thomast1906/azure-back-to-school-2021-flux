@@ -8,8 +8,4 @@ patches:
   - path: backtoschoolacr-image-repo.yaml
     target:
       kind: ImageRepository
-      annotationSelector: hmcts.github.com/image-registry != hmctsprivate
-  - path: backtoschoolacr-image-repo.yaml
-    target:
-      kind: ImageRepository
-      annotationSelector: hmcts.github.com/image-registry == hmctsprivate
+      annotationSelector: hmcts.github.com/image-registry == thomasacracr
