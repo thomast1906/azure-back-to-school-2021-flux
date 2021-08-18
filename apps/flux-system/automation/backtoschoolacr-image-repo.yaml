@@ -5,4 +5,4 @@ metadata:
 spec:
   interval: 5m0s
   secretRef:
-    name: hmctsprivate-creds
+    name: backtoschoolacr-creds
