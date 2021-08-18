@@ -4,3 +4,8 @@ namespace: flux-system
 resources:
   - registry-credential-sync/backtoschoolacr/kustomize.yaml
   - ../../voting-app/automation
+patches:
+  - path: backtoschoolacr-image-repo.yaml
+    target:
+      kind: ImageRepository
+      annotationSelector: hmcts.github.com/image-registry == thomasacracr
