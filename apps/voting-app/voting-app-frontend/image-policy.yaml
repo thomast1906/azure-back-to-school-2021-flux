@@ -2,8 +2,6 @@ apiVersion: image.toolkit.fluxcd.io/v1alpha2
 kind: ImagePolicy
 metadata:
   name: azure-vote-front
-  annotations:
-    image-registry: thomasacracr
 spec:
   filterTags:
     pattern: '^prod'
