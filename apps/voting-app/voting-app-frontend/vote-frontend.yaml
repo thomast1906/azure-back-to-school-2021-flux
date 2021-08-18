@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,20 +15,20 @@ spec:
       nodeSelector:
         "kubernetes.io/os": linux
       containers:
-      - name: azure-vote-front
-        image: thomasacracr.azurecr.io/azure-vote-front:prod-001 #{"$imagepolicy": "flux-system:azure-vote-front"}
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
-          limits:
-            cpu: 250m
-            memory: 256Mi
-        ports:
-        - containerPort: 80
-        env:
-        - name: REDIS
-          value: "azure-vote-back"
+        - name: azure-vote-front
+          image: thomasacracr.azurecr.io/azure-vote-front:prod-002 #{"$imagepolicy": "flux-system:azure-vote-front"}
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+          ports:
+            - containerPort: 80
+          env:
+            - name: REDIS
+              value: "azure-vote-back"
 ---
 apiVersion: v1
 kind: Service
@@ -39,9 +38,9 @@ spec:
   selector:
     app: azure-vote-front
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -51,9 +50,9 @@ metadata:
     kubernetes.io/ingress.class: azure/application-gateway
 spec:
   rules:
-  - http:
-      paths:
-      - path: /
-        backend:
-          serviceName: azure-vote-front
-          servicePort: 80
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: azure-vote-front
+              servicePort: 80
