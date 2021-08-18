@@ -3,7 +3,7 @@ kind: ImagePolicy
 metadata:
   name: azure-vote-backend
   annotations:
-    hmcts.github.com/prod-automated: disabled
+    image-registry: thomasacracr
 spec:
   filterTags:
     pattern: '^prod'
