@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - registry-credential-sync/backtoschoolacr/kustomize.yaml
-  # - ../../voting-app/automation
+  - ../../voting-app/automation
