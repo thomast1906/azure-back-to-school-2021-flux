@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - registry-credential-sync/backtoschoolacr/kustomize.yaml
-  - ../../testimageauto/automation
+  # - ../../voting-app/automation
 patches:
   - path: backtoschoolacr-image-repo.yaml
     target:
