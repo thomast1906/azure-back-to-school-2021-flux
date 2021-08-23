@@ -9,10 +9,6 @@ patches:
     target:
       kind: ImageRepository
       annotationSelector: hmcts.github.com/image-registry != hmctsprivate
-  - path: hmctsprivate-image-repo.yaml
-    target:
-      kind: ImageRepository
-      annotationSelector: hmcts.github.com/image-registry == hmctsprivate
   - path: prod-image-policy.yaml
     target:
       kind: ImagePolicy
