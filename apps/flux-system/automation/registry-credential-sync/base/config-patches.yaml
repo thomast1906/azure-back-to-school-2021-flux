@@ -4,6 +4,6 @@ metadata:
   name: credentials-sync  # name must match the stub-resource in az-identity.yaml
   namespace: flux-system
 spec:
-  clientID: b1db54c3-0cfa-4fa9-891b-f8299ec0731e
-  resourceID: /subscriptions/04109105-f3ca-44ac-a3a7-66b4936112c3/resourceGroups/thomas-vnet-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/acr-mi-test
+  clientID: f520b70e-8003-4d01-aad4-f51f78cb0ec8
+  resourceID: /subscriptions/04109105-f3ca-44ac-a3a7-66b4936112c3/resourceGroups/azurebacktoschool-mi-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/azurebacktoschool-mi
   type: 0  # user-managed identity
