@@ -3,6 +3,6 @@ kind: ImageRepository
 metadata:
   name: default
 spec:
-  interval: 5m0s
+  interval: 1m0s
   secretRef:
     name: azurebacktoschool-creds
