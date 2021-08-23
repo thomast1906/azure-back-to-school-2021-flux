@@ -4,3 +4,6 @@ metadata:
   name: azure-vote-backend
 spec:
   image: azureback2schoolacr.azurecr.io/azure-vote-backend
+  interval: 5m0s
+  secretRef:
+    name: azurebacktoschool-creds

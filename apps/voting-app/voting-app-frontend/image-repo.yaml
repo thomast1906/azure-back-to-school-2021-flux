@@ -4,3 +4,6 @@ metadata:
   name: azure-vote-front
 spec:
   image: azureback2schoolacr.azurecr.io/azure-vote-front
+  interval: 5m0s
+  secretRef:
+    name: azurebacktoschool-creds
