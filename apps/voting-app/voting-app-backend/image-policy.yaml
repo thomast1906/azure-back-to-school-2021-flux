@@ -3,11 +3,8 @@ kind: ImagePolicy
 metadata:
   name: azure-vote-backend
 spec:
-  filterTags:
-    pattern: '^prod'
-    extract: ''
   policy:
-    alphabetical:
-      order: asc
+    semver:
+      range: 1.0.x
   imageRepositoryRef:
     name: azure-vote-backend
