@@ -3,6 +3,10 @@ kind: ImagePolicy
 metadata:
   name: default
 spec:
+  filterTags:
+    pattern: '^prod-[a-f0-9]+-(?P<ts>[0-9]+)'
+    extract: '$ts'
   policy:
-    semver:
-      range: '>=1.0.0'
+    alphabetical:
+      order: asc
+
