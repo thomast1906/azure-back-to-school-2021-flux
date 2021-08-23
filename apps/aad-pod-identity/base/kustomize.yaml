@@ -14,5 +14,5 @@ spec:
   path: ./apps/aad-pod-identity/${ENVIRONMENT}
   postBuild:
     substitute:
-      NAMESPACE: "votingapp"
+      NAMESPACE: "aad-pod-identity"
       CLUSTER_FULL_NAME: "${ENVIRONMENT}-${CLUSTER}"

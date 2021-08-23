@@ -16,7 +16,7 @@ spec:
         "kubernetes.io/os": linux
       containers:
         - name: azure-vote-back
-          image: thomasacracr.azurecr.io/azure-vote-backend:prod-002 #{"$imagepolicy": "flux-system:azure-vote-backend"}
+          image: azureback2schoolacr.azurecr.io/azure-vote-backend:prod-002 #{"$imagepolicy": "flux-system:azure-vote-backend"}
           env:
             - name: ALLOW_EMPTY_PASSWORD
               value: "yes"
