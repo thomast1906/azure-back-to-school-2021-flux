@@ -471,7 +471,7 @@ spec:
         name: iptableslock
       - name: kubelet-config
         hostPath:
-          path: /etc/aad-pod-identity/kubelet
+          path: /etc/default/kubelet
           type: FileOrCreate
       containers:
       - name: nmi
@@ -509,7 +509,7 @@ spec:
         - mountPath: /run/xtables.lock
           name: iptableslock
         - name: kubelet-config
-          mountPath: /etc/aad-pod-identity/kubelet
+          mountPath: /etc/default/kubelet
           readOnly: true
         livenessProbe:
           httpGet:
